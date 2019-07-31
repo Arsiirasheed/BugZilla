@@ -29,6 +29,18 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
   config.action_mailer.default_url_options = { :host => "https://bugzilla-demo.herokuapp.com/" }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      address: 'smtp.gmail.com',
+      port: 587,
+      domain: 'localhost',
+      user_name: 'munnakhan0101@gmail.com',
+      password: '1a2a3a4a',
+      authentication: 'plain',
+      enable_starttls_auto: true
+  }
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
