@@ -20,4 +20,3 @@ command: rails g migrations CreateJoinTableBugsComments Bugs Comments
 #active Stroage 
 command: rails active_storage:install
 
-add a commit 1
